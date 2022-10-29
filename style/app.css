@@ -1,0 +1,79 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: #4f518c;
+  --textColor: #907ad6;
+  --lightColor: #7fdeff;
+  --darkColor: #2c2a4a;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+.container {
+  width: 100%;
+  background-color: var(--darkColor);
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3em;
+  border-bottom: 2px solid #fff;
+}
+.wrapper {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 5px;
+  height: 150px;
+  background-color: var(--primaryColor);
+  border-radius: 5px;
+}
+.indicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--lightColor);
+  border-radius: 5px;
+}
+.number {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--primaryColor);
+  font-size: 18px;
+}
